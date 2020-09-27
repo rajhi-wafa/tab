@@ -1,0 +1,18 @@
+ALGORITHM carte
+
+VAR
+    A : ARRAY_OF INTGER[10];
+    value:INTEGER;
+    hole:INTEGER;
+BEGIN
+FOR i FROM 1 TO n-1 STEP 1 DO
+    value:=A[i];
+    hole:=i;
+
+    WHILE (hole>0 && A[hole-1]>value) DO
+        A[hole]:=A[hole-1]
+        hole:=hole-1
+    END_WHILE
+    A[hole]:=value
+END_FOR
+END
